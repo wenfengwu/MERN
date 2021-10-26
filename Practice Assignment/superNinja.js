@@ -19,6 +19,7 @@ class Ninja{
 
 }
 
+const minren = new Ninja("minren")
 
 class Sensei extends Ninja{
     constructor(name){
