@@ -8,25 +8,13 @@ function App() {
       <PersonCard
         firstName="Doe"
         lastName="Jane"
-        age="45"
+        age={45}
         hairColor="Black"
       ></PersonCard>
       <PersonCard
         firstName="Smith"
         lastName="John"
-        age="88"
-        hairColor="Brown"
-      ></PersonCard>
-      <PersonCard
-        firstName="Fillmore"
-        lastName="Millard"
-        age="50"
-        hairColor="Brown"
-      ></PersonCard>
-      <PersonCard
-        firstName="Smith"
-        lastName="Maria"
-        age="65"
+        age={88}
         hairColor="Brown"
       ></PersonCard>
     </div>
