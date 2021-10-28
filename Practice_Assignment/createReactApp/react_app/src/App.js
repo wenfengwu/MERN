@@ -17,6 +17,18 @@ function App() {
         age={88}
         hairColor="Brown"
       ></PersonCard>
+      <PersonCard
+        firstName="Fillmore"
+        lastName="Millard"
+        age={50}
+        hairColor="Brown"
+      ></PersonCard>
+      <PersonCard
+        firstName="Smith"
+        lastName="Maria"
+        age={62}
+        hairColor="Brown"
+      ></PersonCard>
     </div>
   );
 }
