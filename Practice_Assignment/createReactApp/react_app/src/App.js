@@ -1,13 +1,11 @@
 import "./App.css";
-import React, {useState} from "react";
-import BoxGenerate from "./components/Tabs";
-import Tabs from "./components/Tabs";
+import TodoList from "./components/TodoList";
 
 function App() {
 
   return(
     <>
-        <Tabs />
+        <TodoList />
         {/* {JSON.stringify(currentBoxs)} */}
     </>
   );
