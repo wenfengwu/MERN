@@ -21,7 +21,6 @@ const DisplayStarWar = (props) => {
                 <p>Terrain: {props.starWar.terrain}</p>
                 <p>Surface Water Color: {props.starWar.surface_water}</p>
                 <p>Population: {props.starWar.population}</p>
-
             </div>
         )
     }

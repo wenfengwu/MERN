@@ -4,9 +4,7 @@ import axios from 'axios';
 import DisplayStarWar from "./DisplayStarWar";
 
 const SearchStarWars = () => {
-    const [starWar, setStarWar] = useState({
-        name: ""
-    });
+    const [starWar, setStarWar] = useState({});
     const [selection, setSelection] = useState("people");
     const [id, setId] = useState("")
 
