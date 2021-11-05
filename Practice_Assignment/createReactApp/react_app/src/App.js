@@ -2,17 +2,16 @@ import "./App.css";
 import React from "react";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SearchStarWars from "./components/SearchStarWars";
+import DisplayStarWar from "./components/DisplayStarWar";
 
 function App() {
 
   return (
     <BrowserRouter>
+        <SearchStarWars />
       <Switch>
-        <Route exact path="/">
-          <SearchStarWars />
-        </Route>
         <Route path="/:userSelection/:userId">
-          <SearchStarWars />
+          <DisplayStarWar /> 
         </Route>
       </Switch>
     </BrowserRouter>

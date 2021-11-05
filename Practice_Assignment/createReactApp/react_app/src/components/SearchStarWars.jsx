@@ -1,10 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import axios from 'axios';
-import DisplayStarWar from "./DisplayStarWar";
 
 const SearchStarWars = () => {
-    const [starWar, setStarWar] = useState({});
     const [selection, setSelection] = useState("people");
     const [id, setId] = useState("")
 
@@ -12,20 +9,16 @@ const SearchStarWars = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(selection, id);
-        requestAPI();
+        console.log(selection, id)
         history.push(`/${selection}/${id}`)
     }
 
-    const requestAPI = () => {
-        axios.get(`https://swapi.dev/api/${selection}/${id}`)
-            .then(response => setStarWar(response.data))
-            .catch(error => setStarWar({error: "error"}))
-    }
+    // const requestAPI = () => {
+    //     axios.get(`https://swapi.dev/api/${selection}/${id}`)
+    //         .then(response => setStarWar(response.data))
+    //         .catch(error => setStarWar({error: "error"}))
+    // }
 
-    const showDisplay = () => {
-        <DisplayStarWar starWar = {starWar} selection = {selection} id = {id}/>
-    }
 
     return (
         <div>
@@ -35,6 +28,7 @@ const SearchStarWars = () => {
                     <select value = {selection} onChange = {e => setSelection(e.target.value)}>
                         <option value="people">people</option>
                         <option value="planets">planets</option>
+                        <option value="starships">starships</option>
                     </select>
                 </span>
                 <span style = {{margin: "20px"}}>
@@ -44,7 +38,6 @@ const SearchStarWars = () => {
                 <button>Search</button>
             </form>
             <hr />
-            {starWar.name === "" ? <p></p> : <DisplayStarWar starWar = {starWar} selection = {selection} id = {id}/>}
         </div>
     )
 }
